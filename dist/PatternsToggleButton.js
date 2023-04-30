@@ -1,4 +1,4 @@
-import Pattern from './Pattern';
+import Pattern from "./Pattern.js";
 class PatternsToggleButton {
     constructor() {
         this.handleButtonClick = (event) => {

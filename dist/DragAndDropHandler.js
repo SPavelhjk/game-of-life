@@ -1,4 +1,4 @@
-import Pattern from "./Pattern";
+import Pattern from "./Pattern.js";
 class DragAndDropHandler {
     constructor({ gameOfLife, cellSize }) {
         this.handleDragStart = (event, patternMock) => {

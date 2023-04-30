@@ -1,5 +1,5 @@
 import PATTERNS from "./mock/patterns";
-import Pattern from './Pattern';
+import Pattern from "./Pattern.js";
 class PatternsList {
     constructor({ onMouseDown }) {
         this.listNode = document.querySelector('.patterns__list');

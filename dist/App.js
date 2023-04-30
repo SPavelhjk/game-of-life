@@ -1,7 +1,7 @@
-import GameOfLife from "./GameOfLife";
-import PatternsList from "./PatternsList";
-import DragAndDropHandler from "./DragAndDropHandler";
-import PatternsToggleButton from "./PatternsToggleButton";
+import GameOfLife from "./GameOfLife.js";
+import PatternsList from "./PatternsList.js";
+import DragAndDropHandler from "./DragAndDropHandler.js";
+import PatternsToggleButton from "./PatternsToggleButton.js";
 const CELL_SIZE = 20;
 class App {
     constructor({ canvas }) {

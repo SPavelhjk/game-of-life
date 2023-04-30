@@ -1,6 +1,6 @@
 export type PatternType = [row: number, col: number][]
 
-type PatternKey = 'hwss' | 'mwss' | 'hammerheadspaceship' | 'boat' | 'block' | 'beeHive' | 'loaf' | 'tub'
+type PatternKey = 'glider' | 'hwss' | 'mwss' | 'hammerheadspaceship' | 'boat' | 'block' | 'beeHive' | 'loaf' | 'tub'
 
 type PatternDefinition = Record<PatternKey, PatternType>
 
@@ -28,6 +28,11 @@ const createMinimizedPattern = (rows: number, cols: number, pattern: PatternType
 }
 
 const Pattern: PatternDefinition = {
+  glider: [
+    [0, 0], [0, 1], [0, 2],
+    [1, 2],
+    [2, 1]
+  ],
   hwss: [[0,0],[1,0],[2,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,6],[3,6],[4,4],[4,3],[3,1]],
   mwss: [
     [0,0],[1,0],[2,0],[0,1],[0,2],[0,3],[0,4],[1,5],[3,5],[4,3],[3,1]
@@ -74,6 +79,15 @@ const Pattern: PatternDefinition = {
 }
 
 const PATTERNS: PatternMockType[] = [
+  {
+    name: 'glider',
+    label: 'Glider',
+    pattern: Pattern.glider,
+    minimizedPattern: createMinimizedPattern(7, 12, Pattern.glider),
+    rows: 9,
+    cols: 15,
+    cellSize: 16
+  },
   {
     name: 'hwss',
     label: 'Heavy-weight spaceship (MWSS)',

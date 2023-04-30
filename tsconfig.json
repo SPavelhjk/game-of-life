@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    "module": "es2015",
+    "module": "esNext",
     "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["./*", "./*js"]
+    },
   },
   "include": ["./src/**/*"]
 }

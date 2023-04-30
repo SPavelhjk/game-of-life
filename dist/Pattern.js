@@ -1,4 +1,4 @@
-import Board from "./Board";
+import Board from "./Board.js";
 import Draw2D from "./draw/Draw2D";
 class Pattern {
     constructor({ rows, cols, canvas, pattern, cellSize }) {

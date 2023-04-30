@@ -6,7 +6,9 @@
   "scripts": {
     "start": "concurrently \"es-dev-server --open --node-resolve --watch\" \"npm run watch-ts\"",
     "watch-ts": "tsc --watch",
-    "compile-ts": "tsc"
+    "compile-ts": "tsc",
+    "fix-imports": "node fix-imports.js",
+    "build": "npm run compile-ts && npm run fix-imports"
   },
   "keywords": ["Game of Life"],
   "author": "",

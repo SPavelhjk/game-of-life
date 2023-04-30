@@ -1,4 +1,4 @@
-import Board from "./Board";
+import Board from "./Board.js";
 class Core extends Board {
     constructor({ rows, cols }) {
         super({ rows, cols });
