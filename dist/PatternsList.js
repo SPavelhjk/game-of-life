@@ -1,4 +1,4 @@
-import PATTERNS from "./mock/patterns";
+import PATTERNS from "./mock/patterns.js";
 import Pattern from "./Pattern.js";
 class PatternsList {
     constructor({ onMouseDown }) {

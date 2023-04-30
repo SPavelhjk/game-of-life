@@ -1,5 +1,5 @@
 import Core from "./Core.js";
-import Draw from './draw/DrawWebGL';
+import Draw from "./draw/DrawWebGL.js";
 import { throttle } from "./utils.js";
 const CELL_SIZE = 20;
 const FRAME_RATE = 20;

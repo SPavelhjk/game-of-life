@@ -1,5 +1,5 @@
 import Board from "./Board.js";
-import Draw2D from "./draw/Draw2D";
+import Draw2D from "./draw/Draw2D.js";
 class Pattern {
     constructor({ rows, cols, canvas, pattern, cellSize }) {
         this.board = new Board({ rows, cols });
