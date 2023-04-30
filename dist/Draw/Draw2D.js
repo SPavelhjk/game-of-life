@@ -1,4 +1,4 @@
-import Draw from './Draw';
+import Draw from "./Draw.js";
 class Draw2D extends Draw {
     constructor({ canvas, board, rows, cols, cellSize }) {
         super({ board, cellSize });

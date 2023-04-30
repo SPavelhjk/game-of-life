@@ -1,4 +1,4 @@
-import Draw from './DrawCopy';
+import Draw from "./DrawCopy.js";
 const CELL_SIZE = 20;
 class DrawWebGL extends Draw {
     constructor(canvas, board, boardHeight, boardWidth) {

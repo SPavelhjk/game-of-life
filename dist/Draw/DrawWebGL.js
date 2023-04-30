@@ -1,4 +1,4 @@
-import Draw from './Draw';
+import Draw from "./Draw.js";
 class DrawWebGL extends Draw {
     constructor({ canvas, board, rows, cols, cellSize }) {
         super({ board, cellSize });
