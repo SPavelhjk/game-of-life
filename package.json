@@ -1,0 +1,19 @@
+{
+  "name": "game-of-life",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"es-dev-server --open --node-resolve --watch\" \"npm run watch-ts\"",
+    "watch-ts": "tsc --watch",
+    "compile-ts": "tsc"
+  },
+  "keywords": ["Game of Life"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "es-dev-server": "^2.1.0",
+    "nodemon": "^2.0.22"
+  }
+}

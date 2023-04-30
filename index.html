@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body, ul {
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+    }
+
+    .controls__button {
+      margin-right: 18px;
+      margin-left: 18px;
+      padding: 8px 32px;
+
+      border: 2px solid rgb(252, 217, 43);
+      font-size: 16px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .patterns {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .patterns__container {
+      position: relative;
+    }
+
+    .patterns__toggle-button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 10;
+      padding: 0;
+      width: 33px;
+      height: 33px;
+      border: 1px solid black;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .patterns__toggle-button div {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .patterns--opened .patterns__toggle-button {
+      box-shadow: 0 0 10px -2px;
+    }
+
+    .patterns__toggle-button canvas {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      border-radius: 50%;
+    }
+
+    .patterns__content {
+      width: 280px;
+      height: 100vh;
+      padding: 12px 18px;
+      border-left: 1px solid rgb(210, 210, 210);
+      box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      opacity: 0;
+      transform: scale(0.0001);
+
+      transition: opacity 0.6s;
+    }
+
+    .patterns--opened .patterns__content {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .patterns__title {
+      margin-top: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .patterns__list {
+      max-height: calc(100% - 80px);
+      overflow: auto;
+      list-style: none;
+    }
+
+    .patterns__item {
+      padding-bottom: 22px;
+      border-bottom: 1px solid lightgray;
+    }
+    
+    .patterns__item:first-of-type {
+      border-top: 1px solid lightgray;
+    }
+
+    .patterns__item canvas {
+      cursor: grab;
+    }
+  </style>
+  <script src="./dist/App.js" type="module"></script>
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div class="controls">
+    <button id="toggle" class="controls__button" tabindex="2">Start</button>
+    <button id="reset" class="controls__button" tabindex="4">Reset</button>
+    <button id="clear" class="controls__button" tabindex="5">Clear</button>
+  </div>
+
+  <div class="patterns">
+    <div class="patterns__container">
+      <button class="patterns__toggle-button" tabindex="1">
+        <div>
+          <canvas id="menu-button-canvas" title="Patterns"></canvas>
+        </div>
+      </button>
+      <div class="patterns__content">
+        <h3 class="patterns__title">List of patterns</h3>
+        <p>Drag and drop the pattern you want to use</p>
+        <ul class="patterns__list"></ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
